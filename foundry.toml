@@ -1,0 +1,17 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+rpc_endpoints = { sepolia = "https://eth-sepolia.g.alchemy.com/v2/fdAjFpZaGKKd_GEf1UNGw5155xDB8drS", arb-sepolia = "https://arb-sepolia.g.alchemy.com/v2/tp-yL51Qv2FfaBamHrrHW" }
+remappings = [
+    "@openzeppelin=lib/openzeppelin-contracts",
+    "@ccip=lib/ccip",
+    "@chainlink/local/=lib/chainlink-local/",
+]
+
+[invariant]
+runs = 128
+depth = 128
+fail_on_revert = false
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
